@@ -1,0 +1,23 @@
+[tool.poetry]
+name = "exercicio-18-06"
+version = "0.1.0"
+description = "Projeto para o prática de django"
+authors = ["Danilo Costa <danilo.v.barbosa@gmail.com>"]
+
+[tool.poetry.dependencies]
+python = "^3.9"
+Django = "^3.2.4"
+psycopg2-binary = "^2.9.1"
+black = "^21.6b0"
+mypy = "^0.902"
+flake8 = "^3.9.2"
+pytest-django = "^4.4.0"
+pytest-html = "^3.1.1"
+Faker = "^8.8.1"
+coverage = "^5.5"
+
+[tool.poetry.dev-dependencies]
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
