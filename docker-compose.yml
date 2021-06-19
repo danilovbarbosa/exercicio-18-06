@@ -22,7 +22,7 @@ services:
         build: 
             dockerfile: Dockerfile
             context: .
-        image: danilocostaolist/ts-seller-marketplace
+        image: danilocostaolist/ts-poetry-django
         container_name: app
         ports: 
             - 8000:8000
