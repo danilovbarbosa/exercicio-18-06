@@ -1,0 +1,10 @@
+.logo {
+  width: 120px;
+  height: 70px;
+}
+
+/* Resize images */
+.logo img {
+  width: 8%;
+  min-width: 120px;
+}

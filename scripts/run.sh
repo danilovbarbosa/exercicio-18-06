@@ -11,7 +11,7 @@ python manage.py check
 
 # echo "from django.contrib.auth.models import User; User.objects.create_superuser('admin', 'admin@admin.com', 'admin')" | python manage.py shell
 
-#python manage.py collectstatic
+# python manage.py collectstatic
 
 # pytest -v --html=htmlcov/report.html --self-contained-html
 # echo '''
