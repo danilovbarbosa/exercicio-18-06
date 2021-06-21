@@ -24,5 +24,4 @@ class TestPageHome(TestCase):
     def test_quando_acessar_url_delete_entao_retonar_template_financa_list(self):
         url = reverse("delete")
         response = self.client.get(url)
-        self.assertEqual(response.status_code, 200)
-        self.assertTemplateUsed(response, "financa_list.html")
+        self.assertRedirects(response, reverse('read'), status_code=200, target_status_code=200)

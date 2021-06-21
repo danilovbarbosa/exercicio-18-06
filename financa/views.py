@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from financa.forms import PagamentoForm
 from financa.models import Pagamento
 
@@ -44,5 +44,6 @@ def update(request, id):
 
 
 def delete(request, id):
-    Pagamento.objects.get(id=id).delete()
+    objeto = get_object_or_404(Pagamento,pk=id)
+    objeto.delete()
     return redirect("read")
