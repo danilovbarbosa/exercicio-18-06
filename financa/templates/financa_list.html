@@ -3,7 +3,7 @@
 {% block content %}
 
 <h2 class="mt-4 maintitle">{{ title_page }}</h2>
-
+<a type="button" class="btn btn-primary" href="{% url 'create' %}">Novo Pagamento</a>
 {% if list_objetos %}
 
 <table class="table">
@@ -30,7 +30,7 @@
             <td>{{ post_objetos.status_pedido }}</td>
             <td>{{ post_objetos.valor_pedido }}</td>
             <td>{{ post_objetos.valor_delivery }}</td>
-            <td><a type="button" class="btn btn-primary" href="{% url 'update' post_objetos.id %}">Update</a>
+            <td><a type="button" class="btn btn-warning" href="{% url 'update' post_objetos.id %}">Update</a>
             </td>
             <td><a type="button" class="btn btn-danger" href="{% url 'delete' post_objetos.id %}">Delete</a>
             </td>
