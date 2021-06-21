@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import get_object_or_404, render, redirect
 from financa.forms import PagamentoForm
 from financa.models import Pagamento
 
@@ -22,7 +22,7 @@ def read(request):
     list_objetos = Pagamento.objects.all()
 
     context = {
-        "title_page": "Criar pagamento",
+        "title_page": "Lista de pagamentos",
         "list_objetos": list_objetos,
     }
     return render(request, "financa_list.html", context=context)
@@ -44,5 +44,6 @@ def update(request, id):
 
 
 def delete(request, id):
-    Pagamento.objects.get(id=id).delete()
+    objeto = get_object_or_404(Pagamento, id=id)
+    objeto.delete()
     return redirect("read")
