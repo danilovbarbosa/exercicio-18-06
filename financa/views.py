@@ -44,6 +44,6 @@ def update(request, id):
 
 
 def delete(request, id):
-    objeto = get_object_or_404(Pagamento,pk=id)
+    objeto = get_object_or_404(Pagamento, id=id)
     objeto.delete()
     return redirect("read")
