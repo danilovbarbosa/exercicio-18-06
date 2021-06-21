@@ -40,7 +40,7 @@ def update(request, id):
         "title_page": "Atualizar pagamento",
         "post": formulario,
     }
-    return render(request, "financa_list.html", context=context)
+    return render(request, "financa_form.html", context=context)
 
 
 def delete(request, id):
