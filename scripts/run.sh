@@ -19,6 +19,6 @@ echo '''
 Veja o relatório de teste disponível na pasta raiz do projeto com o nome: htmlcov/report.html
 
 '''
-# coverage html
+coverage html
 
 python manage.py runserver 0.0.0.0:8000
