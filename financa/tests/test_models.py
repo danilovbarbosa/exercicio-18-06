@@ -31,8 +31,9 @@ def test_quando_acessar_read_entao_retonar_contudo_str_home(client):
     assert "Lista de pagamentos" in str(response.content)
 
 # TODO: Finalizar.
+# @pytest.mark.django_db
 # def test_quando_acessar_update_entao_retonar_status_200(client):
-#     url = reverse("update", kwargs={'id':0})
+#     url = reverse("update", kwargs={'id':'0'})
 #     response = client.get(url)
 #     assert response.status_code == 200
 
