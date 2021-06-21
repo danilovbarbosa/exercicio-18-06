@@ -4,7 +4,7 @@
 
 <h2 class="mt-4 maintitle">{{ title_page }}</h2>
 
-{% if posted_products %}
+{% if list_objetos %}
 
 <table class="table">
     <thead>
@@ -21,18 +21,18 @@
     </thead>
     <tbody>
 
-        {% for posted_product in posted_products %}
+        {% for post_objetos in list_objetos %}
 
         <tr>
-            <td>{{ posted_product.id }}</td>
-            <td>{{ posted_product.product_catalog_id }}</td>
-            <td>{{ posted_product.seller_id }}</td>
-            <td>{{ posted_product.status }}</td>
-            <td>{{ posted_product.created_at }}</td>
-            <td>{{ posted_product.updated_at }}</td>
-            <td><a type="button" class="btn btn-primary" href="{% url 'update-product' posted_product.id %}">Update</a>
+            <td>{{ post_objetos.id }}</td>
+            <td>{{ post_objetos.id_pedido }}</td>
+            <td>{{ post_objetos.id_vendedor }}</td>
+            <td>{{ post_objetos.status_pedido }}</td>
+            <td>{{ post_objetos.valor_pedido }}</td>
+            <td>{{ post_objetos.valor_delivery }}</td>
+            <td><a type="button" class="btn btn-primary" href="{% url 'update' post_objetos.id %}">Update</a>
             </td>
-            <td><a type="button" class="btn btn-danger" href="{% url 'delete-product' posted_product.id %}">Delete</a>
+            <td><a type="button" class="btn btn-danger" href="{% url 'delete' post_objetos.id %}">Delete</a>
             </td>
         </tr>
 

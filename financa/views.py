@@ -28,8 +28,8 @@ def read(request):
     return render(request, "financa_list.html", context=context)
 
 
-def update(request, post_id):
-    post_object = Pagamento.objects.get(id=post_id)
+def update(request, id):
+    post_object = Pagamento.objects.get(id=id)
     formulario = PagamentoForm(request.POST or None, instance=post_object)
 
     if formulario.is_valid():
@@ -43,6 +43,6 @@ def update(request, post_id):
     return render(request, "financa_list.html", context=context)
 
 
-def delete(request, post_id):
-    Pagamento.objects.get(id=post_id).delete()
+def delete(request, id):
+    Pagamento.objects.get(id=id).delete()
     return redirect("read")
