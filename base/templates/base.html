@@ -22,12 +22,11 @@
 
 <body>
 
+
+    {% include 'partials/menu.html' %}
+
     {% block content %}
-    <div>
-        <img class="logo" src="{% static 'images/logoolist.png' %}" alt="Logo do Olist">
-    </div>
-
-
+    <br><br><br>
     <h1>Hello, world!</h1>
     {% endblock content %}
 
