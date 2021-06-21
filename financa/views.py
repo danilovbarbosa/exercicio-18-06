@@ -22,7 +22,7 @@ def read(request):
     list_objetos = Pagamento.objects.all()
 
     context = {
-        "title_page": "Criar pagamento",
+        "title_page": "Lista de pagamentos",
         "list_objetos": list_objetos,
     }
     return render(request, "financa_list.html", context=context)
