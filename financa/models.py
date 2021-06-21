@@ -24,3 +24,6 @@ class Pagamento(models.Model):
 
     valor_pedido = models.DecimalField(max_digits=19, decimal_places=10)
     valor_delivery = models.DecimalField(max_digits=19, decimal_places=10)
+
+    def __str__(self):
+        return f"{self.id_pedido}"

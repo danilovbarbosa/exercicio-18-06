@@ -1,3 +1,7 @@
 from django.contrib import admin
+from financa.models import Pagamento
 
-# Register your models here.
+
+@admin.register(Pagamento)
+class PagamentoAdmin(admin.ModelAdmin):
+    pass
