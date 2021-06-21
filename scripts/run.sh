@@ -13,12 +13,12 @@ python manage.py check
 
 # python manage.py collectstatic
 
-# pytest -v --html=htmlcov/report.html --self-contained-html
-# echo '''
+pytest -v --html=htmlcov/report.html --self-contained-html
+echo '''
 
-# Veja o relatório de teste disponível na pasta raiz do projeto com o nome: htmlcov/report.html
+Veja o relatório de teste disponível na pasta raiz do projeto com o nome: htmlcov/report.html
 
-# '''
+'''
 # coverage html
 
 python manage.py runserver 0.0.0.0:8000
