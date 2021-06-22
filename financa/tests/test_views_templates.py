@@ -39,7 +39,6 @@ class TestPageHome(TestCase):
         response = self.client.get(url)
         self.assertTemplateUsed(response, "financa_form.html")
 
-
     def test_quando_acessar_url_delete_entao_retonar_template_financa_list(
         self,
     ):

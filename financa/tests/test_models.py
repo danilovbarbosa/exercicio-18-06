@@ -54,7 +54,7 @@ def test_valid_form(obj_pagamento):
         "valor_pedido": obj_pagamento.valor_pedido,
         "valor_delivery": obj_pagamento.valor_delivery,
     }
-    
+
     form = PagamentoForm(data=data)
-    
+
     assert form.is_valid() == True
