@@ -1,8 +1,23 @@
 from django.shortcuts import get_object_or_404, render, redirect
+
+from rest_framework import viewsets
+
 from financa.forms import PagamentoForm
 from financa.models import Pagamento
+from financa.serializers import PagamentoSerializer
 
 
+# Views DRF
+class PagamentoViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+
+    queryset = Pagamento.objects.all().order_by("-id_pedido")
+    serializer_class = PagamentoSerializer
+
+
+# Views Django
 def create(request):
     formulario = PagamentoForm(request.POST or None)
 
